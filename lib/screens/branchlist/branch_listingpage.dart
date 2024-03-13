@@ -19,41 +19,43 @@ class _BranchListingState extends State<BranchListing> {
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Welcome Nandan',
-                    style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: 20.0),
-                  DataTable(
-                    columns: [
-                      DataColumn(label: Text('ID')),
-                      DataColumn(label: Text('Branch Name')),
-                      DataColumn(label: Text('Action')),
-                    ],
-                    rows: [
-                      DataRow(cells: [
-                        DataCell(Text('001')),
-                        DataCell(Text('Bangalore')),
-                        DataCell(
-                          IconButton(
-                            icon: Icon(Icons.arrow_forward),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => BranchSelectApp(),
-                                ),
-                              );
-                            },
-                          ),
-                        ),
-                      ]),
-                      // Add more DataRow entries for additional branches
-                    ],
-                  ),
+              child: DataTable(
+                columns: [
+                  DataColumn(label: Text('ID')),
+                  DataColumn(label: Text('Branch Name')),
+                  DataColumn(label: Text('Action')),
+                ],
+                rows: [
+                  DataRow(cells: [
+                    DataCell(Text('001')),
+                    DataCell(Text('Bangalore')),
+                    DataCell(
+                      IconButton(
+                        icon: Icon(Icons.arrow_forward),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => BranchSelectApp()),
+                          );
+                        },
+                      ),
+                    ),
+                  ]),
+                  DataRow(cells: [
+                    DataCell(Text('002')),
+                    DataCell(Text('Hyderabad')),
+                    DataCell(
+                      IconButton(
+                        icon: Icon(Icons.arrow_forward),
+                        onPressed: () {
+                          Navigator.push(  
+                            context,
+                            MaterialPageRoute(builder: (context) => BranchSelectApp()),
+                          );
+                        },
+                      ),
+                    ),
+                  ]),
                 ],
               ),
             ),
