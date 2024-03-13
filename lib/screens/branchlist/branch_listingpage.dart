@@ -1,34 +1,58 @@
 import 'package:flutter/material.dart';
+import 'package:los_app/screens/branchSelect/branch_select.dart';
 
-
-class Branchlisting extends StatefulWidget
-{
+class BranchListing extends StatefulWidget {
   @override
-  _BranchlistingState createState() => _BranchlistingState();
+  _BranchListingState createState() => _BranchListingState();
 }
-class _BranchlistingState extends State<Branchlisting> {
-  @override
-  Widget build (BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title:Text('Branch Listing'),
-    ),
-   body: Column(
-    children: [HeaderSection(),Expanded(child:Padding(padding: const EdgeInsets.all(16.0),
-    child:Column(mainAxisAlignment: MainAxisAlignment.center,children:[
-      Text('Welcome Nandan',
-      style: TextStyle(fontSize: 18.0,fontWeight: FontWeight.bold),
-      ),
-    SizedBox(height: 20),
-                  ElevatedButton(
-                    onPressed: () {
-                      // Perform login logic here
-                      // For now, let's just print a message
-                      print('Login successful');
 
-                      // Navigate to the authentication screen
-                      
-                    },
-                    child: Text('Branch Listing'),
+class _BranchListingState extends State<BranchListing> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Branch Listing'),
+      ),
+      body: Column(
+        children: [
+          HeaderSection(),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Welcome Nandan',
+                    style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 20.0),
+                  DataTable(
+                    columns: [
+                      DataColumn(label: Text('ID')),
+                      DataColumn(label: Text('Branch Name')),
+                      DataColumn(label: Text('Action')),
+                    ],
+                    rows: [
+                      DataRow(cells: [
+                        DataCell(Text('001')),
+                        DataCell(Text('Bangalore')),
+                        DataCell(
+                          IconButton(
+                            icon: Icon(Icons.arrow_forward),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => BranchSelectApp(),
+                                ),
+                              );
+                            },
+                          ),
+                        ),
+                      ]),
+                      // Add more DataRow entries for additional branches
+                    ],
                   ),
                 ],
               ),
@@ -40,6 +64,7 @@ class _BranchlistingState extends State<Branchlisting> {
     );
   }
 }
+
 class HeaderSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
