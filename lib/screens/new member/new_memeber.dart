@@ -13,8 +13,8 @@ class _NewMemberPageState extends State<NewMemberPage> {
   TextEditingController centerNameController = TextEditingController();
   TextEditingController membersController = TextEditingController();
 
-  List<String> groupProducts = ['Group Product 1', 'Group Product 2', 'Group Product 3'];
-  List<String> weeklyOptions = ['Weekly Option 1', 'Weekly Option 2', 'Weekly Option 3'];
+  List<String> groupProducts = ['Group Product A', 'Group Product B', 'Group Product C'];
+  List<String> weeklyOptions = ['Weekly Option X', 'Weekly Option Y', 'Weekly Option Z'];
 
   @override
   Widget build(BuildContext context) {

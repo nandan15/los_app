@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-
+import 'package:los_app/screens/new member/new_memeber.dart';
 void main() {
   runApp(NewLeadScreenApp());
 }
@@ -39,7 +39,7 @@ class NewLeadScreen extends StatelessWidget {
                 // Add your authentication logic here (e.g., check credentials)
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => NewLeadScreenApp()),
+                  MaterialPageRoute(builder: (context) => NewMemberPage()),
                 );
               },
               child: Text('New Center'),
