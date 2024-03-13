@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:los_app/screens/newleadcreation/new_leadscreen.dart';
 
 void main() {
   runApp(BranchSelectApp());
@@ -44,9 +45,6 @@ class BranchSelectScreen extends StatelessWidget {
             style: TextStyle(fontSize: 18,),
           ),
           SizedBox(height: 20),
-          // Branch buttons
-          // Add more branches as needed
-          SizedBox(height: 20),
           // Working Date
           Text(
             'Working Date: 2024-03-13',
@@ -59,7 +57,10 @@ class BranchSelectScreen extends StatelessWidget {
             children: [
               ElevatedButton.icon(
                 onPressed: () {
-                  // Handle New Lead Creation
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => NewLeadScreenApp()),
+                  );
                 },
                 icon: Icon(Icons.add),
                 label: Text('New Lead Creation'),
