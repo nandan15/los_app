@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:los_app/screens/authentication/authentication_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -50,6 +51,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   // Show an error message or handle authentication failure
                   print('Login failed');
                 }
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AuthPage()),
+                );
               },
               child: Text('Login'),
             ),
