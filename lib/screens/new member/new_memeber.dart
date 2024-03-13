@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:los_app/screens/Activity%20Details/activity_details.dart';
 
 class NewMemberPage extends StatefulWidget {
   @override
@@ -69,7 +70,10 @@ class _NewMemberPageState extends State<NewMemberPage> {
             Center(
               child: ElevatedButton(
                 onPressed: () {
-                  // Implement logic to create a new application
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ActivityDetails()),
+                  );
                   print('New application created!');
                 },
                 child: Text('Create New Application'),

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ActivityDetails extends StatefulWidget {
+class ProspectMaintence extends StatefulWidget {
   @override
-  _ActivityDetailsState createState() => _ActivityDetailsState();
+  _ProspectMaintence createState() => _ProspectMaintence();
 }
 
-class _ActivityDetailsState extends State<ActivityDetails> {
+class _ProspectMaintence extends State<ProspectMaintence> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
