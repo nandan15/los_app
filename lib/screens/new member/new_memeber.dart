@@ -6,15 +6,13 @@ class NewMemberPage extends StatefulWidget {
 }
 
 class _NewMemberPageState extends State<NewMemberPage> {
-  String selectedGroupProduct = '';
-  String selectedWeeklyOption = '';
+  String selectedGroupProduct = 'Group Product A'; // Default value
 
   TextEditingController leadController = TextEditingController();
   TextEditingController centerNameController = TextEditingController();
   TextEditingController membersController = TextEditingController();
 
-  List<String> groupProducts = ['Group Product A', 'Group Product B', 'Group Product C'];
-  List<String> weeklyOptions = ['Weekly Option X', 'Weekly Option Y', 'Weekly Option Z'];
+  List<String> groupProducts = ['Group Product A'];
 
   @override
   Widget build(BuildContext context) {
@@ -27,53 +25,55 @@ class _NewMemberPageState extends State<NewMemberPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Add New Lead:'),
-            TextFormField(controller: leadController),
-            SizedBox(height: 20.0),
-            Text('Enter Center Name:'),
-            TextFormField(controller: centerNameController),
-            SizedBox(height: 20.0),
-            Text('Enter Lead/Members:'),
-            TextFormField(controller: membersController),
-            SizedBox(height: 20.0),
-            Text('Select Group Product:'),
-            DropdownButton<String>(
-              value: selectedGroupProduct,
-              items: groupProducts.map((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
-              onChanged: (value) {
-                setState(() {
-                  selectedGroupProduct = value!;
-                });
-              },
+            Text(
+              'Adding New Lead',
+              style: TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             SizedBox(height: 20.0),
-            Text('Select Weekly Option:'),
-            DropdownButton<String>(
-              value: selectedWeeklyOption,
-              items: weeklyOptions.map((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
-              onChanged: (value) {
-                setState(() {
-                  selectedWeeklyOption = value!;
-                });
-              },
+            Form(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Center Name:'),
+                  TextFormField(controller: centerNameController),
+                  SizedBox(height: 20.0),
+                  Text('Enter Lead/Members:'),
+                  TextFormField(controller: membersController),
+                  SizedBox(height: 20.0),
+                  Text('Select Group Product Weekly:'),
+                  DropdownButtonFormField<String>(
+                    value: selectedGroupProduct,
+                    items: groupProducts.map((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                    onChanged: (value) {
+                      setState(() {
+                        selectedGroupProduct = value!;
+                      });
+                    },
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+                    ),
+                  ),
+                ],
+              ),
             ),
             SizedBox(height: 20.0),
-            ElevatedButton(
-              onPressed: () {
-                // Implement logic to create a new application
-                print('New application created!');
-              },
-              child: Text('Create New Application'),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  // Implement logic to create a new application
+                  print('New application created!');
+                },
+                child: Text('Create New Application'),
+              ),
             ),
           ],
         ),
