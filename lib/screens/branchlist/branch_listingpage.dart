@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:los_app/screens/branchSelect/branch_select.dart';
 
-class Branchlisting extends StatefulWidget {
+class BranchListing extends StatefulWidget {
+class Branchlisting extends StatefulWidget
+{
   @override
-  _BranchlistingState createState() => _BranchlistingState();
+  _BranchListingState createState() => _BranchListingState();
 }
 
-class _BranchlistingState extends State<Branchlisting> {
+class _BranchListingState extends State<BranchListing> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,30 +21,47 @@ class _BranchlistingState extends State<Branchlisting> {
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Welcome Nandan',
-                    style:
-                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
-                  ),
+              child: DataTable(
+                columns: [
+                  DataColumn(label: Text('ID')),
+                  DataColumn(label: Text('Branch Name')),
+                  DataColumn(label: Text('Action')),
+                ],
+                rows: [
+                  DataRow(cells: [
+                    DataCell(Text('001')),
+                    DataCell(Text('Bangalore')),
+                    DataCell(
+                      IconButton(
+                        icon: Icon(Icons.arrow_forward),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => BranchSelectApp()),
+                          );
+                        },
+                      ),
                   SizedBox(height: 20),
-                  ElevatedButton(
-                    onPressed: () {
-                      // Perform login logic here
-                      // For now, let's just print a message
-                      print('Login successful');
-                      Navigator.push(
+                  ]),
+                  DataRow(cells: [
+                    DataCell(Text('002')),
+                    DataCell(Text('Hyderabad')),
+                    DataCell(
+                      IconButton(
+                        icon: Icon(Icons.arrow_forward),
+                        onPressed: () {
+                          Navigator.push(  
+                            context,
+                            MaterialPageRoute(builder: (context) => BranchSelectApp()),
+                          );
                         context,
                         MaterialPageRoute(
                             builder: (context) => BranchSelectScreen()),
                       );
-
-                      // Navigate to the authentication screen
-                    },
-                    child: Text('Branch Listing'),
-                  ),
+                        },
+                      ),
+                    ),
+                  ]),
                 ],
               ),
             ),

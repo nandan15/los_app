@@ -68,7 +68,7 @@ class MainContentSection extends StatelessWidget {
                 context,
                 MaterialPageRoute(builder: (context) => LoginScreen()),
               );
-            },
+            },  
             child: Text('Go to Login Screen'),
           ),
         ],

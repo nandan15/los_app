@@ -37,7 +37,7 @@ class AuthField extends StatelessWidget {
           SizedBox(height: 20.0),
           ElevatedButton(
             onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>Branchlisting()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>BranchListing()));
             },
             child: Text('Login'),
           ),
