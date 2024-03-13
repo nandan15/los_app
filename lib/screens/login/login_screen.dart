@@ -32,10 +32,12 @@ class _LoginScreenState extends State<LoginScreen> {
                       // Perform login logic here
                       // For now, let's just print a message
                       print('Login successful');
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => AuthPage()),
-                );
+
+                      // Navigate to the authentication screen
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => AuthPage()),
+                      );
                     },
                     child: Text('Login'),
                   ),
