@@ -7,13 +7,13 @@ class NewMemberPage extends StatefulWidget {
 }
 
 class _NewMemberPageState extends State<NewMemberPage> {
-  String selectedGroupProduct = 'Group Product Weekly DropDown'; // Default value
+  String selectedGroupProduct = 'Group Product A'; // Default value
 
   TextEditingController leadController = TextEditingController();
   TextEditingController centerNameController = TextEditingController();
   TextEditingController membersController = TextEditingController();
 
-  List<String> groupProducts = ['Group Product Weekly DropDown'];
+  List<String> groupProducts = ['Group Product A'];
 
   @override
   Widget build(BuildContext context) {
