@@ -1,33 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:los_app/main.dart';
-import 'package:los_app/screens/authentication/authentication_screen.dart';
 
-class LoginScreen extends StatefulWidget {
+
+class Branchlisting extends StatefulWidget
+{
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _BranchlistingState createState() => _BranchlistingState();
 }
-
-class _LoginScreenState extends State<LoginScreen> {
+class _BranchlistingState extends State<Branchlisting> {
   @override
-  Widget build(BuildContext context) {
+  Widget build (BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Login'),
+      appBar: AppBar(title:Text('Branch Listing'),
+    ),
+   body: Column(
+    children: [HeaderSection(),Expanded(child:Padding(padding: const EdgeInsets.all(16.0),
+    child:Column(mainAxisAlignment: MainAxisAlignment.center,children:[
+      Text('Welcome Nandan',
+      style: TextStyle(fontSize: 18.0,fontWeight: FontWeight.bold),
       ),
-      body: Column(
-        children: [
-          HeaderSection(),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Educating Group Pic',
-                    style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: 20),
+    SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: () {
                       // Perform login logic here
@@ -35,12 +26,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       print('Login successful');
 
                       // Navigate to the authentication screen
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => AuthPage()),
-                      );
+                      
                     },
-                    child: Text('Login'),
+                    child: Text('Branch Listing'),
                   ),
                 ],
               ),
@@ -52,7 +40,6 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
-
 class HeaderSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
