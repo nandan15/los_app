@@ -41,7 +41,9 @@ class BranchSelectScreen extends StatelessWidget {
           // Select Branch
           Text(
             'Select a Branch:002/Mumbai',
-            style: TextStyle(fontSize: 18,),
+            style: TextStyle(
+              fontSize: 18,
+            ),
           ),
           SizedBox(height: 20),
           // Branch buttons
