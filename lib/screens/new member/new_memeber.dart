@@ -7,13 +7,13 @@ class NewMemberPage extends StatefulWidget {
 }
 
 class _NewMemberPageState extends State<NewMemberPage> {
-  String selectedGroupProduct = 'Group Product A'; // Default value
+  String selectedGroupProduct = 'Group Product Weekly DropDown'; // Default value
 
   TextEditingController leadController = TextEditingController();
   TextEditingController centerNameController = TextEditingController();
   TextEditingController membersController = TextEditingController();
 
-  List<String> groupProducts = ['Group Product A'];
+  List<String> groupProducts = ['Group Product Weekly DropDown'];
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +44,7 @@ class _NewMemberPageState extends State<NewMemberPage> {
                   Text('Enter Lead/Members:'),
                   TextFormField(controller: membersController),
                   SizedBox(height: 20.0),
-                  Text('Select Group Product Weekly:'),
+                  Text('Select Group Product'),
                   DropdownButtonFormField<String>(
                     value: selectedGroupProduct,
                     items: groupProducts.map((String value) {
