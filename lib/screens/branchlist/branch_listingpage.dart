@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:los_app/screens/branchSelect/branch_select.dart';
 
 class BranchListing extends StatefulWidget {
-class Branchlisting extends StatefulWidget
-{
   @override
   _BranchListingState createState() => _BranchListingState();
 }
@@ -41,7 +39,7 @@ class _BranchListingState extends State<BranchListing> {
                           );
                         },
                       ),
-                  SizedBox(height: 20),
+                    ),
                   ]),
                   DataRow(cells: [
                     DataCell(Text('002')),
@@ -50,14 +48,10 @@ class _BranchListingState extends State<BranchListing> {
                       IconButton(
                         icon: Icon(Icons.arrow_forward),
                         onPressed: () {
-                          Navigator.push(  
+                          Navigator.push(
                             context,
                             MaterialPageRoute(builder: (context) => BranchSelectApp()),
                           );
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => BranchSelectScreen()),
-                      );
                         },
                       ),
                     ),
