@@ -70,7 +70,7 @@ class _ActivityDetailsState extends State<ActivityDetails> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ProspectMaintence()),
+                      MaterialPageRoute(builder: (context) => ProspectMaintenance()),
                     );
                   },
                 )),
