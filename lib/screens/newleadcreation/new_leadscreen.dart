@@ -1,22 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:los_app/screens/new member/new_memeber.dart';
-void main() {
-  runApp(NewLeadScreenApp());
-}
 
-class NewLeadScreenApp extends StatelessWidget {
+class NewLeadScreen extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Adding New Lead',
-      theme: ThemeData(),
-      home: NewLeadScreen(),
-    );
-  }
+  NewLeadScreenApp createState() => NewLeadScreenApp();
 }
 
-class NewLeadScreen extends StatelessWidget {
+class NewLeadScreenApp extends State<NewLeadScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,6 +15,8 @@ class NewLeadScreen extends StatelessWidget {
         ),
         body: SafeArea(
             child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 50),
             Text(
@@ -62,7 +54,7 @@ class NewLeadScreen extends StatelessWidget {
                 // Add your authentication logic here (e.g., check credentials)
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => NewLeadScreenApp()),
+                  MaterialPageRoute(builder: (context) => NewLeadScreen()),
                 );
               },
               child: Text('Existing Center'),

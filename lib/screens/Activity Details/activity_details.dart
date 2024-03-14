@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:los_app/screens/Address/address_button.dart';
+import 'package:los_app/screens/existing%20application/existing_application.dart';
 import 'package:los_app/screens/prospect%20maintenance/prospect_maintenance.dart';
 
 class ActivityDetails extends StatefulWidget {
@@ -66,7 +68,7 @@ class _ActivityDetailsState extends State<ActivityDetails> {
                 DataCell(Text('Prospect Maintenance')),
                 DataCell(Text('InProgress')),
                 DataCell(IconButton(
-                  icon: Icon(Icons.hourglass_empty),
+                  icon: Icon(Icons.menu_outlined),
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -81,7 +83,7 @@ class _ActivityDetailsState extends State<ActivityDetails> {
                 DataCell(IconButton(
                   icon: Icon(Icons.access_time),
                   onPressed: () {
-                    // Add functionality for the action
+                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Address()),);
                   },
                 )),
               ]),
@@ -91,7 +93,7 @@ class _ActivityDetailsState extends State<ActivityDetails> {
                 DataCell(IconButton(
                   icon: Icon(Icons.not_started),
                   onPressed: () {
-                    // Add functionality for the action
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ExistingApplication()),);
                   },
                 )),
               ]),

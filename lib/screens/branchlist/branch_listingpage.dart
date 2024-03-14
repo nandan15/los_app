@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:los_app/screens/branchSelect/branch_select.dart';
+import 'package:los_app/screens/login/login_screen.dart';
 
 class BranchListing extends StatefulWidget {
   @override
@@ -12,10 +13,23 @@ class _BranchListingState extends State<BranchListing> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Branch Listing'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.power_settings_new_rounded),
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()),);
+            },
+          ),
+        ],
       ),
       body: Column(
         children: [
           HeaderSection(),
+          SizedBox(height: 20), // Added SizedBox for spacing
+          Text(
+            'Welcome Nandan',
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
