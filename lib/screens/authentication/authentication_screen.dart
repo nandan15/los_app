@@ -1,18 +1,23 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:los_app/components/auth_field.dart';
-import 'package:los_app/main.dart';
+import 'package:los_app/screens/branchlist/branch_listingpage.dart';
 
-class AuthPage extends StatelessWidget {
-  AuthPage({super.key});
+class AuthScreen extends StatefulWidget {
+  @override
+  AuthPage createState() => AuthPage();
+}
+
+class AuthPage extends State<AuthScreen> {
+  // AuthPage({super.key});
 
   final mpinController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          title: Text('Authentication'),
+        ),
         backgroundColor: Colors.grey[308],
         body: SafeArea(
           // child: Center(
@@ -43,7 +48,7 @@ class AuthPage extends StatelessWidget {
                   // Add your authentication logic here (e.g., check credentials)
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => AuthPage()),
+                    MaterialPageRoute(builder: (context) => BranchListing()),
                   );
                 },
                 child: Text('Forgot MPIN'),

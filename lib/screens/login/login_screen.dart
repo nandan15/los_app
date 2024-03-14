@@ -25,7 +25,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   Text(
                     'Educating Group Pic',
-                    style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                    style:
+                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 20),
                   ElevatedButton(
@@ -37,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       // Navigate to the authentication screen
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => AuthPage()),
+                        MaterialPageRoute(builder: (context) => AuthScreen()),
                       );
                     },
                     child: Text('Login'),
