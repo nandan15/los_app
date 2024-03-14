@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:los_app/screens/newapplication/new_applicationscreen.dart';
 import 'package:los_app/screens/newleadcreation/new_leadscreen.dart';
 
 void main() {
@@ -61,7 +62,7 @@ class BranchSelectScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => NewLeadScreenApp()),
+                    MaterialPageRoute(builder: (context) => NewLeadScreen()),
                   );
                 },
                 icon: Icon(Icons.add),
@@ -81,6 +82,10 @@ class BranchSelectScreen extends StatelessWidget {
           ElevatedButton.icon(
             onPressed: () {
               // Handle Village Survey
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => NewApplicationScreen()),
+              // );
             },
             icon: Icon(Icons.map),
             label: Text('Village Survey'),
