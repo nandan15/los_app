@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:los_app/screens/Activity%20Details/activity_details.dart';
+import 'package:los_app/screens/newapplication/new_applicationscreen.dart';
 
 class NewMemberPage extends StatefulWidget {
   @override
@@ -60,7 +61,8 @@ class _NewMemberPageState extends State<NewMemberPage> {
                     },
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      contentPadding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+                      contentPadding:
+                          EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
                     ),
                   ),
                 ],
@@ -72,7 +74,9 @@ class _NewMemberPageState extends State<NewMemberPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ActivityDetails()),
+                    MaterialPageRoute(
+                        builder: (context) => NewApplicationScreen()),
+                    // builder: (context) => ActivityDetails()),
                   );
                   print('New application created!');
                 },
