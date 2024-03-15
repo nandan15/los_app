@@ -57,9 +57,9 @@ class _ExistingApplicationState extends State<ExistingApplication> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     TextButton(
-                      onPressed: () {
-                        // Define the functionality for the Application button
-                      },
+                            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>ApplicationTab()),);
+            },
                       child: Text('Application'),
                     ),
                   ],
