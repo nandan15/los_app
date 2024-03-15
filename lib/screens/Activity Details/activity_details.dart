@@ -3,6 +3,7 @@ import 'package:los_app/screens/Address/address_button.dart';
 import 'package:los_app/screens/existing%20application/existing_application.dart';
 import 'package:los_app/screens/member%20Screen/member_screen.dart';
 import 'package:los_app/screens/prospect%20maintenance/prospect_maintenance.dart';
+import 'package:los_app/screens/referscreen/referscreen.dart';
 
 class ActivityDetails extends StatefulWidget {
   @override
@@ -35,35 +36,33 @@ class _ActivityDetailsState extends State<ActivityDetails> {
             'Prospect Maintenance',
             style: TextStyle(fontSize: 18),
           ),
-          SizedBox(height:20),
+          SizedBox(height: 20),
           Text(
             'New Center and New Member Process Flow',
             style: TextStyle(fontSize: 18),
           ),
           SizedBox(height: 20),
-         DataTable(
-  columns: [
-    DataColumn(
-      label: Text(
-        'Application',
-        style: TextStyle(color: Colors.blue), // Change color here
-      ),
-    ),
-    DataColumn(
-      label: Text(
-        'Approved',
-        style: TextStyle(color: Colors.blue), // Change color here
-      ),
-    ),
-    DataColumn(
-      label: Text(
-        'Action',
-        style: TextStyle(color: Colors.blue), // Change color here
-      ),
-    ),
-  ],
-
-
+          DataTable(
+            columns: [
+              DataColumn(
+                label: Text(
+                  'Application',
+                  style: TextStyle(color: Colors.blue), // Change color here
+                ),
+              ),
+              DataColumn(
+                label: Text(
+                  'Approved',
+                  style: TextStyle(color: Colors.blue), // Change color here
+                ),
+              ),
+              DataColumn(
+                label: Text(
+                  'Action',
+                  style: TextStyle(color: Colors.blue), // Change color here
+                ),
+              ),
+            ],
             rows: [
               DataRow(cells: [
                 DataCell(Text('Prospect Maintenance')),
@@ -73,7 +72,8 @@ class _ActivityDetailsState extends State<ActivityDetails> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ProspectMaintenance()),
+                      MaterialPageRoute(
+                          builder: (context) => ProspectMaintenance()),
                     );
                   },
                 )),
@@ -84,7 +84,10 @@ class _ActivityDetailsState extends State<ActivityDetails> {
                 DataCell(IconButton(
                   icon: Icon(Icons.access_time),
                   onPressed: () {
-                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Member()),);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Member()),
+                    );
                   },
                 )),
               ]),
@@ -94,7 +97,11 @@ class _ActivityDetailsState extends State<ActivityDetails> {
                 DataCell(IconButton(
                   icon: Icon(Icons.not_started),
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ExistingApplication()),);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ExistingApplication()),
+                    );
                   },
                 )),
               ]),
@@ -126,7 +133,8 @@ class _ActivityDetailsState extends State<ActivityDetails> {
                   children: [
                     SizedBox(width: 1), // Adjust spacing between buttons
                     Padding(
-                      padding: EdgeInsets.only(right: 0), // Adjust left padding for 'Import'
+                      padding: EdgeInsets.only(
+                          right: 0), // Adjust left padding for 'Import'
                       child: TextButton(
                         onPressed: () {
                           // Add functionality for Import
@@ -140,7 +148,8 @@ class _ActivityDetailsState extends State<ActivityDetails> {
                     ),
                     SizedBox(width: 1), // Adjust spacing between buttons
                     Padding(
-                      padding: EdgeInsets.only(right: 10), // Adjust left padding for 'Import'
+                      padding: EdgeInsets.only(
+                          right: 10), // Adjust left padding for 'Import'
                       child: TextButton(
                         onPressed: () {
                           // Add functionality for Import
@@ -153,6 +162,10 @@ class _ActivityDetailsState extends State<ActivityDetails> {
                 TextButton(
                   onPressed: () {
                     // Add functionality for View
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ReferScreen()),
+                    );
                   },
                   child: Text('View'),
                 ),
