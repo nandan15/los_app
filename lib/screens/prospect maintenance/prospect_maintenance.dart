@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:los_app/screens/Address/address_button.dart';
 
 class ProspectMaintenance extends StatefulWidget {
   @override
@@ -9,64 +8,87 @@ class ProspectMaintenance extends StatefulWidget {
 class _ProspectMaintenanceState extends State<ProspectMaintenance> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Activity Details"),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          SizedBox(
-            height: 10,
-          ),
-          Text(
-            'Application Stage:Prospect Maintenance',
-            style: TextStyle(fontSize: 20),
-          ),
-          SizedBox(height: 20),
-          Text(
-            '<CenterName>/New Center:00212345/march 21 2024',
-            style: TextStyle(fontSize: 15),
-          ),
-          SizedBox(height: 20),
-          Text(
-            'Prospect Maintenance: New Center and New Member',
-            style: TextStyle(fontSize: 15),
-          ),
-          SizedBox(height: 20),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              ElevatedButton.icon(
-                onPressed: () {
-                  // Action for Prospect button
-                },
-                icon: Icon(Icons.person),
-                label: Text('Prospect'),
-              ),
-              ElevatedButton.icon(
-                onPressed: () {
-                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Address()),);
-                },
-                icon: Icon(Icons.person),
-                label: Text('Address'),
-              ),
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("Activity Details"),
+          bottom: TabBar(
+            tabs: [
+              Tab(text: 'Prospect'),
+              Tab(text: 'Address'),
             ],
           ),
-          SizedBox(height:20),
-          Column(
-            children: [
-              SizedBox(height:20),
-              Text('Processflow:NCNPF'),
-              Text('FileNo:002112345'),
-              Text('Branch:0002-mumbai'),
-              Text('CenterName:<CenterName>'),
-              Text('Member:2'),
-              Text('FileDate:21/3/2024')
-            ]
-          )
-        ],
+        ),
+        body: TabBarView(
+          children: [
+            SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 20),
+                    Text('Processflow:NCNPF'),
+                    Text('FileNo:002112345'),
+                    Text('Branch:0002-mumbai'),
+                    Text('CenterName:<CenterName>'),
+                    Text('Member:2'),
+                    Text('FileDate:21/3/2024'),
+                  ],
+                ),
+              ),
+            ),
+            SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 20),
+                    Form(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Address'),
+                          TextFormField(),
+                          SizedBox(height: 20),
+                          Text('Location'),
+                          TextFormField(),
+                          SizedBox(height: 20),
+                          Text('Village'),
+                          TextFormField(),
+                          SizedBox(height: 20),
+                          Text('Area Category'),
+                          TextFormField(),
+                          SizedBox(height: 20),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              ElevatedButton(
+                                onPressed: () {
+                                  // Add functionality for Save button
+                                },
+                                child: Text('Save'),
+                              ),
+                              SizedBox(width: 20),
+                              // Add widget for map upload
+                              Placeholder(
+                                color: Colors.grey,
+                                fallbackHeight: 100,
+                                fallbackWidth: 100,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
