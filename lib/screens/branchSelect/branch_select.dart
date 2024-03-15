@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:los_app/screens/housevisit/housevisit_screen.dart';
 import 'package:los_app/screens/newapplication/new_applicationscreen.dart';
 import 'package:los_app/screens/newleadcreation/new_leadscreen.dart';
 
@@ -82,10 +83,10 @@ class BranchSelectScreen extends StatelessWidget {
           ElevatedButton.icon(
             onPressed: () {
               // Handle Village Survey
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => NewApplicationScreen()),
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HouseVisitScreen()),
+              );
             },
             icon: Icon(Icons.map),
             label: Text('Village Survey'),
