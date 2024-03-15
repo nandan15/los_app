@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:los_app/screens/Activity%20Details/activity_details.dart';
 
 class NewApplicationScreen extends StatefulWidget {
   @override
@@ -54,7 +55,7 @@ class NewApplicationScreenApp extends State<NewApplicationScreen> {
           // Spacer(),
           ElevatedButton(
             onPressed: () {
-              //Add Routing
+             Navigator.push(context, MaterialPageRoute(builder: (context)=>ActivityDetails()),);
             },
             child: Text('Application Stage'),
           ),

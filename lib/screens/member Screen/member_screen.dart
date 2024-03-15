@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:los_app/screens/Profile/profile.dart';
 
 class Member extends StatefulWidget {
   @override
@@ -58,35 +59,37 @@ class _MemberState extends State<Member> {
                   style: TextStyle(fontSize: 18),
                 ),
                 SizedBox(height: 20),
-                DataTable(
-                  columns: [
-                    DataColumn(
-                      label: Text(
-                        'Name',
-                        style: TextStyle(color: Colors.blue),
+                Center(
+                  child: DataTable(
+                    columns: [
+                      DataColumn(
+                        label: Text(
+                          'Name',
+                          style: TextStyle(color: Colors.blue),
+                        ),
                       ),
-                    ),
-                    DataColumn(
-                      label: Text(
-                        'Status',
-                        style: TextStyle(color: Colors.blue),
+                      DataColumn(
+                        label: Text(
+                          'Status',
+                          style: TextStyle(color: Colors.blue),
+                        ),
                       ),
-                    ),
-                  ],
-                  rows: [
-                    DataRow(cells: [
-                      DataCell(Text("Profile")),
-                      DataCell(Icon(Icons.check)),
-                    ]),
-                    DataRow(cells: [
-                      DataCell(Text('Loan Details')),
-                      DataCell(Icon(Icons.check)),
-                    ]),
-                    DataRow(cells: [
-                      DataCell(Text('Address')),
-                      DataCell(Icon(Icons.check)),
-                    ]),
-                  ],
+                    ],
+                    rows: [
+                      DataRow(cells: [
+                        DataCell(Text("Profile")),
+                        DataCell(Icon(Icons.check)),
+                      ]),
+                      DataRow(cells: [
+                        DataCell(Text('Loan Details')),
+                        DataCell(Icon(Icons.check)),
+                      ]),
+                      DataRow(cells: [
+                        DataCell(Text('Address')),
+                        DataCell(Icon(Icons.check)),
+                      ]),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -98,17 +101,14 @@ class _MemberState extends State<Member> {
         children: [
           ElevatedButton.icon(
             onPressed: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => NewLeadScreen()),
-              // );
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Profile()),);
             },
             icon: Icon(Icons.portrait_rounded),
             label: Text('Profile View'),
           ),
           ElevatedButton.icon(
             onPressed: () {
-              // Handle Member File
+
             },
             icon: Icon(Icons.remove_red_eye_outlined),
             label: Text('POC View'),
