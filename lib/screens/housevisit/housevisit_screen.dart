@@ -6,7 +6,10 @@ class HouseVisitScreen extends StatefulWidget {
 }
 
 class HouseVisitScreenApp extends State<HouseVisitScreen> {
-  bool isChecked = false;
+  bool isChecked1 = false;
+  bool isChecked2 = false;
+  bool isChecked3 = false;
+  bool isChecked4 = false;
 
   @override
   Widget build(BuildContext context) {
@@ -56,15 +59,15 @@ class HouseVisitScreenApp extends State<HouseVisitScreen> {
                         Row(
                           children: [
                             Checkbox(
-                              value: isChecked,
+                              value: isChecked1,
                               onChanged: (bool? value) {
                                 // Some method
                                 setState(() {
-                                  isChecked = value!;
+                                  isChecked1 = value!;
                                 });
                               },
                             ),
-                            Text(isChecked ? 'Visted' : 'Not Visited'),
+                            Text(isChecked1 ? 'Visted' : 'Not Visited'),
                           ],
                         ),
                       ),
@@ -108,15 +111,15 @@ class HouseVisitScreenApp extends State<HouseVisitScreen> {
                         Row(
                           children: [
                             Checkbox(
-                              value: isChecked,
+                              value: isChecked2,
                               onChanged: (bool? value) {
                                 // Some method
                                 setState(() {
-                                  isChecked = value!;
+                                  isChecked2 = value!;
                                 });
                               },
                             ),
-                            Text(isChecked ? 'Visted' : 'Not Visited'),
+                            Text(isChecked2 ? 'Visted' : 'Not Visited'),
                           ],
                         ),
                       ),
@@ -160,15 +163,15 @@ class HouseVisitScreenApp extends State<HouseVisitScreen> {
                         Row(
                           children: [
                             Checkbox(
-                              value: isChecked,
+                              value: isChecked3,
                               onChanged: (bool? value) {
                                 // Some method
                                 setState(() {
-                                  isChecked = value!;
+                                  isChecked3 = value!;
                                 });
                               },
                             ),
-                            Text(isChecked ? 'Visted' : 'Not Visited'),
+                            Text(isChecked3 ? 'Visted' : 'Not Visited'),
                           ],
                         ),
                       ),
@@ -212,15 +215,15 @@ class HouseVisitScreenApp extends State<HouseVisitScreen> {
                         Row(
                           children: [
                             Checkbox(
-                              value: isChecked,
+                              value: isChecked4,
                               onChanged: (bool? value) {
                                 // Some method
                                 setState(() {
-                                  isChecked = value!;
+                                  isChecked4 = value!;
                                 });
                               },
                             ),
-                            Text(isChecked ? 'Visted' : 'Not Visited'),
+                            Text(isChecked4 ? 'Visted' : 'Not Visited'),
                           ],
                         ),
                       ),
