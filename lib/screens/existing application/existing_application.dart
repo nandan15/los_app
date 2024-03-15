@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:los_app/screens/application%20tab/application_tab.dart';
 
 class ExistingApplication extends StatefulWidget {
   @override
@@ -58,7 +59,8 @@ class _ExistingApplicationState extends State<ExistingApplication> {
                   children: <Widget>[
                     TextButton(
                             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>ApplicationTab()),);
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>ApplicationTab
+              ()),);
             },
                       child: Text('Application'),
                     ),
