@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:los_app/screens/Address/address_button.dart';
 import 'package:los_app/screens/existing%20application/existing_application.dart';
+import 'package:los_app/screens/member%20Screen/member_screen.dart';
 import 'package:los_app/screens/prospect%20maintenance/prospect_maintenance.dart';
 
 class ActivityDetails extends StatefulWidget {
@@ -83,7 +84,7 @@ class _ActivityDetailsState extends State<ActivityDetails> {
                 DataCell(IconButton(
                   icon: Icon(Icons.access_time),
                   onPressed: () {
-                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Address()),);
+                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Member()),);
                   },
                 )),
               ]),
