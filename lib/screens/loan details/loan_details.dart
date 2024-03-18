@@ -179,7 +179,7 @@ class  _LoanDetailsState extends State<LoanDetails> {
                           // Update your value here
                         });
                       },
-                      items: <String>['Template Schedule', 'Template Schedule', ]
+                      items: <String>['Loan Category', 'Loan Category', ]
                           .map<DropdownMenuItem<String>>((String value) {
                         return DropdownMenuItem<String>(
                           value: value,
