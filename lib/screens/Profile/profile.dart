@@ -390,7 +390,7 @@ class _ProfileState extends State<Profile> {
                   'Client loan Cycle Member',
                   style: TextStyle(fontSize: 18),
                 ),
-                SizedBox(width: 50),
+                SizedBox(width: 20),
                 Expanded(
                   child: TextFormField(
                     decoration: InputDecoration(
@@ -408,7 +408,7 @@ class _ProfileState extends State<Profile> {
                   'loan scheme Id',
                   style: TextStyle(fontSize: 18),
                 ),
-                SizedBox(width: 20),
+                SizedBox(width: 110),
                 DropdownButton<String>(
                   value: _selectedLoanSchemeId,
                   onChanged: (String? newValue) {
@@ -437,7 +437,7 @@ class _ProfileState extends State<Profile> {
                   'Expect loan Amount',
                   style: TextStyle(fontSize: 18),
                 ),
-                SizedBox(width: 50),
+                SizedBox(width: 60),
                 Expanded(
                   child: TextFormField(
                     decoration: InputDecoration(
@@ -454,7 +454,7 @@ class _ProfileState extends State<Profile> {
                   'Expect Term',
                   style: TextStyle(fontSize: 18),
                 ),
-                SizedBox(width: 50),
+                SizedBox(width: 125),
                 Expanded(
                   child: TextFormField(
                     decoration: InputDecoration(

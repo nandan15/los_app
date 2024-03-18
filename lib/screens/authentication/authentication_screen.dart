@@ -45,16 +45,16 @@ class AuthPage extends State<AuthScreen> {
                 obscureText: true,
               ),
               const SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {
-                  // Add your authentication logic here (e.g., check credentials)
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => LoanDetails()),
-                  );
-                },
-                child: Text('Forgot MPIN'),
-              ),
+              // ElevatedButton(
+              //   onPressed: () {
+              //     // Add your authentication logic here (e.g., check credentials)
+              //     Navigator.push(
+              //       context,
+              //       MaterialPageRoute(builder: (context) => LoanDetails()),
+              //     );
+              //   },
+              //   child: Text('Forgot MPIN'),
+              // ),
               // const SizedBox(height: 360),
               // FooterSection(),
             ],
