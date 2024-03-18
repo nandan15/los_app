@@ -541,3 +541,205 @@
 // }
 //
 //
+            SizedBox(height: 20),
+            Row(
+              children: <Widget>[
+                Text(
+                  'Expect loan Amount',
+                  style: TextStyle(fontSize: 18),
+                ),
+                SizedBox(width: 50),
+                Expanded(
+                    child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: 'Expect loan Amount',
+                  ),
+                ))
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              children: <Widget>[
+                Text(
+                  'Expect Term',
+                  style: TextStyle(fontSize: 18),
+                ),
+                SizedBox(width: 50),
+                Expanded(
+                    child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: 'Expect Term',
+                  ),
+                ))
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              children: <Widget>[
+                Text(
+                  'Expect Repayment Term',
+                  style: TextStyle(fontSize: 18),
+                ),
+                SizedBox(width: 50),
+                Expanded(
+                    child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: 'Expect Repayment Term',
+                  ),
+                ))
+              ],
+            ),
+            SizedBox(height: 20),
+            // Title Dropdown
+            Row(
+              children: <Widget>[
+                Text(
+                  'Template Schedule',
+                  style: TextStyle(fontSize: 18),
+                ),
+                SizedBox(width: 20),
+                DropdownButton<String>(
+                  value: 'Template Schedule',
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      // Update your value here
+                    });
+                  },
+                  items: <String>[
+                    'Template Schedule',
+                    'Template Schedule',
+                  ].map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            // Title Dropdown
+            Row(
+              children: <Widget>[
+                Text(
+                  'Loan Category',
+                  style: TextStyle(fontSize: 18),
+                ),
+                SizedBox(width: 20),
+                DropdownButton<String>(
+                  value: 'Loan Category',
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      // Update your value here
+                    });
+                  },
+                  items: <String>[
+                    'Template Schedule',
+                    'Template Schedule',
+                  ].map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              children: <Widget>[
+                Text(
+                  'Purpose',
+                  style: TextStyle(fontSize: 18),
+                ),
+                SizedBox(width: 50),
+                Expanded(
+                    child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: 'Enter Purpose',
+                  ),
+                ))
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              children: <Widget>[
+                Text(
+                  'Disbursement Mode',
+                  style: TextStyle(fontSize: 18),
+                ),
+                SizedBox(width: 50),
+                Expanded(
+                    child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: 'Enter Disbursement Mode',
+                  ),
+                ))
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              children: <Widget>[
+                Text(
+                  'Repayment Mode',
+                  style: TextStyle(fontSize: 18),
+                ),
+                SizedBox(width: 50),
+                Expanded(
+                    child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: 'Repayment Mode',
+                  ),
+                ))
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              children: <Widget>[
+                Text(
+                  'Repayment Frequency',
+                  style: TextStyle(fontSize: 18),
+                ),
+                SizedBox(width: 50),
+                Expanded(
+                    child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: 'Enter Repayment Frequency',
+                  ),
+                ))
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              children: <Widget>[
+                Text(
+                  'Repayment Frequency',
+                  style: TextStyle(fontSize: 18),
+                ),
+                SizedBox(width: 50),
+                Expanded(
+                    child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: 'Enter Repayment Frequency',
+                  ),
+                ))
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              children: <Widget>[
+                Text(
+                  'Repayment Frequency',
+                  style: TextStyle(fontSize: 18),
+                ),
+                SizedBox(width: 50),
+                Expanded(
+                    child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: 'Enter Repayment Frequency',
+                  ),
+                ))
+              ],
+            ),
+          ],
+        ));

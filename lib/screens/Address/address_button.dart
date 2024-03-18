@@ -37,13 +37,15 @@ class _AddressState extends State<Address> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Flexible( // Use Flexible widget to allow text wrapping
+                    Flexible(
+                      // Use Flexible widget to allow text wrapping
                       child: Text(
                         'Prospect Maintenance',
                         style: TextStyle(fontSize: 18),
                       ),
                     ),
-                    Flexible( // Use Flexible widget to allow text wrapping
+                    Flexible(
+                      // Use Flexible widget to allow text wrapping
                       child: Text(
                         'New Center and New Member Process Flow',
                         style: TextStyle(fontSize: 18),
@@ -113,7 +115,10 @@ class _AddressState extends State<Address> {
                     ],
                   ),
                 ),
-                SizedBox(height: MediaQuery.of(context).viewInsets.bottom), // Adjust for keyboard
+                SizedBox(
+                    height: MediaQuery.of(context)
+                        .viewInsets
+                        .bottom), // Adjust for keyboard
               ],
             ),
           ),
