@@ -49,7 +49,7 @@ class _BranchListingState extends State<BranchListing> {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => BranchSelectApp()),
+                            MaterialPageRoute(builder: (context) => BranchSelect()),
                           );
                         },
                       ),
@@ -64,7 +64,7 @@ class _BranchListingState extends State<BranchListing> {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => BranchSelectApp()),
+                            MaterialPageRoute(builder: (context) => BranchSelect()),
                           );
                         },
                       ),

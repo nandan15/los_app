@@ -1,28 +1,18 @@
 import 'package:flutter/material.dart';
-// import 'package:los_app/screens/New%20Address/newaddress.dart';
+import 'package:los_app/screens/New%20Address/newaddress.dart';
 import 'package:los_app/screens/housevisit/housevisit_screen.dart';
 import 'package:los_app/screens/newapplication/new_applicationscreen.dart';
 import 'package:los_app/screens/newleadcreation/new_leadscreen.dart';
 import 'package:los_app/screens/referscreen/referscreen.dart';
 
-void main() {
-  runApp(BranchSelectApp());
-}
 
-class BranchSelectApp extends StatelessWidget {
+
+class BranchSelect extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Branch Select Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: BranchSelectScreen(),
-    );
-  }
+  _BranchSelect createState() => _BranchSelect();
 }
 
-class BranchSelectScreen extends StatelessWidget {
+class _BranchSelect extends State<BranchSelect> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,10 +64,10 @@ class BranchSelectScreen extends StatelessWidget {
               ElevatedButton.icon(
                 onPressed: () {
                   // Handle Member File
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => NewAddress()),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => NewAddress()),
+                  );
                 },
                 icon: Icon(Icons.person),
                 label: Text('Member File'),
