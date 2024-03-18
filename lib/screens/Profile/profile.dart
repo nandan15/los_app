@@ -161,19 +161,21 @@ class _ProfileState extends State<Profile> {
                         ),
                       ),
                     ),
-
                   ],
                 ),
-SizedBox(height:20),
+                SizedBox(height: 20),
                 Row(
                   children: <Widget>[
-                    Text('Middle Name',
-                    style:TextStyle(fontSize: 18),),
-                    SizedBox(width:30),
+                    Text(
+                      'Middle Name',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    SizedBox(width: 30),
                     Expanded(
-                      child:TextFormField(decoration:InputDecoration(
-                        hintText: 'Enter Middle Name',
-                      ),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          hintText: 'Enter Middle Name',
+                        ),
                       ),
                     ),
                   ],
@@ -186,12 +188,13 @@ SizedBox(height:20),
                       style: TextStyle(fontSize: 18),
                     ),
                     SizedBox(width: 100),
-            Expanded(
-              child:TextFormField(decoration:InputDecoration(
-                hintText: 'dd/mm/yyyy',
-              ),
-              ),
-            ),
+                    Expanded(
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          hintText: 'dd/mm/yyyy',
+                        ),
+                      ),
+                    ),
                   ],
                 ),
                 SizedBox(height: 20),
@@ -219,31 +222,37 @@ SizedBox(height:20),
                     ),
                   ],
                 ),
-                SizedBox(height:20),
+                SizedBox(height: 20),
                 Row(
                   children: <Widget>[
-                    Text('Marital Status ',
-                      style:TextStyle(fontSize: 18),),
-                    SizedBox(width:20),
+                    Text(
+                      'Marital Status ',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    SizedBox(width: 20),
                     Expanded(
-                      child:TextFormField(decoration:InputDecoration(
-                        hintText: 'Single',
-                      ),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          hintText: 'Single',
+                        ),
                       ),
                     ),
                   ],
                 ),
 
-                SizedBox(height:20),
+                SizedBox(height: 20),
                 Row(
                   children: <Widget>[
-                    Text('Spouse Name ',
-                      style:TextStyle(fontSize: 18),),
-                    SizedBox(width:20),
+                    Text(
+                      'Spouse Name ',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    SizedBox(width: 20),
                     Expanded(
-                      child:TextFormField(decoration:InputDecoration(
-                        hintText: 'ABC',
-                      ),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          hintText: 'ABC',
+                        ),
                       ),
                     ),
                   ],
@@ -263,8 +272,13 @@ SizedBox(height:20),
                           _selectedLiteracyLevel = newValue;
                         });
                       },
-                      items: <String>['Primary', 'Secondary', 'Higher Secondary', 'Graduate', 'Post Graduate']
-                          .map<DropdownMenuItem<String>>((String value) {
+                      items: <String>[
+                        'Primary',
+                        'Secondary',
+                        'Higher Secondary',
+                        'Graduate',
+                        'Post Graduate'
+                      ].map<DropdownMenuItem<String>>((String value) {
                         return DropdownMenuItem<String>(
                           value: value,
                           child: Text(value),
@@ -274,85 +288,104 @@ SizedBox(height:20),
                   ],
                 ),
 
-                SizedBox(height:20),
+                SizedBox(height: 20),
                 Row(
                   children: <Widget>[
-                    Text('ID Type 1',
-                      style:TextStyle(fontSize: 18),),
-                    SizedBox(width:70),
+                    Text(
+                      'ID Type 1',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    SizedBox(width: 70),
                     Expanded(
-                      child:TextFormField(decoration:InputDecoration(
-                        hintText: 'Aadhar',
-                      ),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          hintText: 'Aadhar',
+                        ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height:20),
+                SizedBox(height: 20),
                 Row(
                   children: <Widget>[
-                    Text('ID Number',
-                      style:TextStyle(fontSize: 18),),
-                    SizedBox(width:60),
+                    Text(
+                      'ID Number',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    SizedBox(width: 60),
                     Expanded(
-                      child:TextFormField(decoration:InputDecoration(
-                        hintText: '1232323',
-                      ),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          hintText: '1232323',
+                        ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height:20),
+                SizedBox(height: 20),
                 Row(
                   children: <Widget>[
-                    Text('ID Type 2',
-                      style:TextStyle(fontSize: 18),),
-                    SizedBox(width:70),
+                    Text(
+                      'ID Type 2',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    SizedBox(width: 70),
                     Expanded(
-                      child:TextFormField(decoration:InputDecoration(
-                        hintText: 'Pan Card',
-                      ),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          hintText: 'Pan Card',
+                        ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height:20),
+                SizedBox(height: 20),
                 Row(
                   children: <Widget>[
-                    Text('ID Number',
-                      style:TextStyle(fontSize: 18),),
-                    SizedBox(width:60),
-                    Expanded(
-                      child:TextFormField(decoration:InputDecoration(
-                        hintText: '123434',
-                      ),
-                      ),
+                    Text(
+                      'ID Number',
+                      style: TextStyle(fontSize: 18),
                     ),
-                  ],
-                ), SizedBox(height:20),
-                Row(
-                  children: <Widget>[
-                    Text('Religion',
-                      style:TextStyle(fontSize: 18),),
-                    SizedBox(width:80),
+                    SizedBox(width: 60),
                     Expanded(
-                      child:TextFormField(decoration:InputDecoration(
-                        hintText: 'Hindu',
-                      ),
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          hintText: '123434',
+                        ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height:20),
+                SizedBox(height: 20),
                 Row(
                   children: <Widget>[
-                    Text('Caste',
-                      style:TextStyle(fontSize: 18),),
-                    SizedBox(width:100),
+                    Text(
+                      'Religion',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    SizedBox(width: 80),
                     Expanded(
-                      child:TextFormField(decoration:InputDecoration(
-                        hintText: 'OBC',
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          hintText: 'Hindu',
+                        ),
                       ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+                Row(
+                  children: <Widget>[
+                    Text(
+                      'Caste',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    SizedBox(width: 100),
+                    Expanded(
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          hintText: 'OBC',
+                        ),
                       ),
                     ),
                   ],
