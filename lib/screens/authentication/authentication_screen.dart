@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:los_app/components/auth_field.dart';
 import 'package:los_app/screens/branchlist/branch_listingpage.dart';
 
+import '../loan details/loan_details.dart';
+
 class AuthScreen extends StatefulWidget {
   @override
   AuthPage createState() => AuthPage();
@@ -48,7 +50,7 @@ class AuthPage extends State<AuthScreen> {
                   // Add your authentication logic here (e.g., check credentials)
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => BranchListing()),
+                    MaterialPageRoute(builder: (context) => LoanDetails()),
                   );
                 },
                 child: Text('Forgot MPIN'),

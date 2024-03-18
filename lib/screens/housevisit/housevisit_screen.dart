@@ -44,7 +44,7 @@ class HouseVisitScreenApp extends State<HouseVisitScreen> {
             height: 195,
             child: Padding(
               padding: const EdgeInsets.all(10.0),
-              child: DataTable(
+              child: DataTable( 
                 columns: [
                   DataColumn(label: Text('RAM')),
                   DataColumn(label: Text('')),
