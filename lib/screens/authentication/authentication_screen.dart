@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:los_app/components/auth_field.dart';
 import 'package:los_app/screens/branchlist/branch_listingpage.dart';
 
-import '../loan details/loan_details.dart';
+
 
 class AuthScreen extends StatefulWidget {
   @override
